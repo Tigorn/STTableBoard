@@ -20,7 +20,7 @@ class STBoardHeaderView: UIView {
 
     var number: Int = 0 {
         didSet {
-            numberLabel.text = " · \(number)"
+            numberLabel.text = ""
         }
     }
 
@@ -28,9 +28,10 @@ class STBoardHeaderView: UIView {
         let label = UILabel()
         label.textAlignment = .left
         label.font = TableBoardCommonConstant.labelFont
-        label.textColor = UIColor.darkGrayTextColor
-        label.setContentHuggingPriority(UILayoutPriorityDefaultHigh, for: .horizontal)
-        label.setContentCompressionResistancePriority(UILayoutPriorityDefaultLow, for: .horizontal)
+        label.textColor = .black
+        label.textAlignment = .center
+//        label.setContentHuggingPriority(UILayoutPriorityDefaultHigh, for: .horizontal)
+//        label.setContentCompressionResistancePriority(UILayoutPriorityDefaultLow, for: .horizontal)
         return label
     }()
 
@@ -68,7 +69,7 @@ class STBoardHeaderView: UIView {
         let leading: CGFloat = BoardHeaderViewConstant.labelLeading
         let spacing: CGFloat = 0.0
         let trailing: CGFloat = 0.0
-        let horizontalConstraits = NSLayoutConstraint.constraints(withVisualFormat: "H:|-leading-[titleLabel]-spacing@500-[numberLabel]-spacing-[actionButton]-trailing-|", options: [], metrics: ["leading":leading, "trailing":trailing, "spacing":spacing], views: ["titleLabel":titleLabel, "numberLabel":numberLabel, "actionButton":actionButton])
+        let horizontalConstraits = NSLayoutConstraint.constraints(withVisualFormat: "H:|-leading-[titleLabel]-trailing-|", options: [], metrics: ["leading":leading, "trailing":trailing, "spacing":spacing], views: ["titleLabel":titleLabel])
         let titleLabelVerticalConstrait = NSLayoutConstraint(item: titleLabel,
             attribute: .top,
             relatedBy: .equal,

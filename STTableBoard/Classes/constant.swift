@@ -29,7 +29,7 @@ enum STTableBoardOrientation {
 }
 
 struct TableBoardCommonConstant {
-    static let labelFont: UIFont = UIFont.systemFont(ofSize: 15.0)
+    static let labelFont: UIFont = UIFont.systemFont(ofSize: 17.0)
 }
 
 struct BoardHeaderViewConstant {

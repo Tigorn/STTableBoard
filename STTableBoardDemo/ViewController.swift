@@ -23,17 +23,17 @@ class ViewController: UIViewController {
     var dataArray: [[String]] = []
     var titleArray: [String] = []
     var localizedString: [String: String] = [
-        "STTableBoard.AddRow": "Add Task...",
-        "STTableBoard.AddBoard": "Add Stage...",
-        "STTableBoard.BoardMenuTextViewController.Title": "编辑阶段名称",
-        "STTableBoard.EditBoardNameCell.Title": "编辑阶段",
-        "STTableBoard.DeleteBoardCell.Title": "删除阶段",
-        "STTableBoard.DeleteBoard.Alert.Message": "确定要删除这个阶段吗？",
-        "STTableBoard.Delete": "删除",
-        "STTableBoard.Cancel": "Cancel",
-        "STTableBoard.OK": "确定",
-        "STTableBoard.Create": "Create",
-        "STTableBoard.RefreshFooter.text": "Fuck Loading..."
+        "STTableBoard.AddRow": "+",
+        "STTableBoard.AddBoard": "+++ ...",
+        "STTableBoard.BoardMenuTextViewController.Title": "BoardMenuTextViewController.Title",
+        "STTableBoard.EditBoardNameCell.Title": "EditBoardNameCell.Title",
+        "STTableBoard.DeleteBoardCell.Title": "DeleteBoardCell.Title阶段",
+        "STTableBoard.DeleteBoard.Alert.Message": "DeleteBoard.Alert.Message",
+        "STTableBoard.Delete": "Удалиьть",
+        "STTableBoard.Cancel": "Отмена",
+        "STTableBoard.OK": "ОК",
+        "STTableBoard.Create": "Сохранить",
+        "STTableBoard.RefreshFooter.text": "Загрузка..."
     ]
     lazy var tableBoard: STTableBoard = {
         let table = STTableBoard(localizedStrings: self.localizedString)
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         self.automaticallyAdjustsScrollViewInsets = false
         super.viewDidLoad()
-        self.title = "Teambition"
+        self.title = "Title"
         setupContianerView()
         setupExitFullScreenView()
         configureTableBoard()
