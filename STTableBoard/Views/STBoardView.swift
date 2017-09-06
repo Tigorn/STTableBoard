@@ -113,7 +113,7 @@ class STBoardView: UIView {
     func setupProperty(_ showRefreshFooter: Bool) {
         backgroundColor = boardBackgroundColor
         let layer = self.layer
-        layer.cornerRadius = 5.0
+        layer.cornerRadius = 12.0
         layer.masksToBounds = true
         layer.borderColor = boardBorderColor.cgColor
         layer.borderWidth = 0.5

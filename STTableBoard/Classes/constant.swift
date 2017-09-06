@@ -51,8 +51,8 @@ let bottom: CGFloat = top
 let pageSpacing: CGFloat = leading / 2
 let overlap: CGFloat = pageSpacing * 3
 let rotateAngel: CGFloat = .pi / 36
-let headerViewHeight: CGFloat = 30
-let footerViewHeight: CGFloat = 44.0
+let headerViewHeight: CGFloat = 65
+let footerViewHeight: CGFloat = 60
 let newBoardButtonViewHeight: CGFloat = 56.0
 let newBoardComposeViewHeight: CGFloat = 122.0
 let newCellComposeViewTextFieldHeight: CGFloat = 40.0
@@ -65,7 +65,7 @@ let minimumMovingRowInterval: TimeInterval = 0.2
 let pageControlHeight: CGFloat = 20.0
 
 //Color
-let boardBackgroundColor: UIColor = UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+let boardBackgroundColor: UIColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
 let tableBoardBackgroundColor: UIColor = UIColor(white: 1.0, alpha: 1.0)
 //let tableBoardBackgroundColor: UIColor = UIColor.lightGray
 let boardBorderColor: UIColor = UIColor(red: 229.0/255.0, green: 229.0/255.0, blue: 229.0/255.0, alpha: 1.0)
@@ -100,15 +100,15 @@ var currentOrientation: STTableBoardOrientation {
 }
 
 var localizedString: [String: String] = [
-    "STTableBoard.AddRow": "添加任务...",
-    "STTableBoard.AddBoard": "添加阶段...",
-    "STTableBoard.BoardMenuTextViewController.Title": "编辑阶段名称",
-    "STTableBoard.EditBoardNameCell.Title": "编辑阶段",
-    "STTableBoard.DeleteBoardCell.Title": "删除阶段",
-    "STTableBoard.DeleteBoard.Alert.Message": "确定要删除这个阶段吗？",
-    "STTableBoard.Delete": "删除",
-    "STTableBoard.Cancel": "取消",
-    "STTableBoard.OK": "确定",
-    "STTableBoard.Create": "创建",
-    "STTableBoard.RefreshFooter.text": "载入中..."
+    "STTableBoard.AddRow": "+",
+    "STTableBoard.AddBoard": "+++ ...",
+    "STTableBoard.BoardMenuTextViewController.Title": "BoardMenuTextViewController.Title",
+    "STTableBoard.EditBoardNameCell.Title": "EditBoardNameCell.Title",
+    "STTableBoard.DeleteBoardCell.Title": "DeleteBoardCell.Title阶段",
+    "STTableBoard.DeleteBoard.Alert.Message": "DeleteBoard.Alert.Message",
+    "STTableBoard.Delete": "Удалиьть",
+    "STTableBoard.Cancel": "Отмена",
+    "STTableBoard.OK": "ОК",
+    "STTableBoard.Create": "Сохранить",
+    "STTableBoard.RefreshFooter.text": "Загрузка..."
 ]
