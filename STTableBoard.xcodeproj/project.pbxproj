@@ -81,9 +81,9 @@
 		EB793B091C1E608900BF1148 = {
 			isa = PBXGroup;
 			children = (
-				EBB2206A1D04F9100085C31F /* Frameworks */,
 				EB793B151C1E608900BF1148 /* STTableBoard */,
 				EB793B141C1E608900BF1148 /* Products */,
+				EBB2206A1D04F9100085C31F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

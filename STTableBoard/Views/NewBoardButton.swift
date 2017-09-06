@@ -15,7 +15,7 @@ class NewBoardButton: UIView {
     
     var title: String? {
         didSet {
-            titleLabel.text = title
+            titleLabel.text = title ?? "" + "test"
         }
     }
     var image: UIImage? {
@@ -48,7 +48,7 @@ class NewBoardButton: UIView {
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         let roundedPath = UIBezierPath(roundedRect: rect, cornerRadius: 4.0)
-        context?.setFillColor(UIColor.white.cgColor)
+        context?.setFillColor(UIColor.red.cgColor)
         newBoardButtonBackgroundColor.setFill()
         roundedPath.fill()
         

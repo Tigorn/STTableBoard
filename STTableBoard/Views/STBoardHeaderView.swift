@@ -43,13 +43,13 @@ class STBoardHeaderView: UIView {
         return label
     }()
     
-    fileprivate lazy var actionButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "boardHeaderMoreButton", in: currentBundle, compatibleWith: nil), for: .normal)
-        button.addTarget(self, action: #selector(self.actionButtonBeClicked(_:)), for: .touchUpInside)
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -10)
-        return button
-    }()
+//    fileprivate lazy var actionButton: UIButton = {
+//        let button = UIButton()
+//        button.setImage(UIImage(named: "boardHeaderMoreButton", in: currentBundle, compatibleWith: nil), for: .normal)
+//        button.addTarget(self, action: #selector(self.actionButtonBeClicked(_:)), for: .touchUpInside)
+//        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -10)
+//        return button
+//    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,16 +59,16 @@ class STBoardHeaderView: UIView {
     func setupProperty() {
         addSubview(titleLabel)
         addSubview(numberLabel)
-        addSubview(actionButton)
-        
+//        addSubview(actionButton)
+
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         numberLabel.translatesAutoresizingMaskIntoConstraints = false
-        actionButton.translatesAutoresizingMaskIntoConstraints = false
-        
+//        actionButton.translatesAutoresizingMaskIntoConstraints = false
+
         let leading: CGFloat = BoardHeaderViewConstant.labelLeading
         let spacing: CGFloat = 0.0
         let trailing: CGFloat = 0.0
-        let horizontalConstraits = NSLayoutConstraint.constraints(withVisualFormat: "H:|-leading-[titleLabel]-spacing@500-[numberLabel]-spacing-[actionButton]-trailing-|", options: [], metrics: ["leading":leading, "trailing":trailing, "spacing":spacing], views: ["titleLabel":titleLabel, "numberLabel":numberLabel, "actionButton":actionButton])
+//        let horizontalConstraits = NSLayoutConstraint.constraints(withVisualFormat: "H:|-leading-[titleLabel]-spacing@500-[numberLabel]-spacing-[actionButton]-trailing-|", options: [], metrics: ["leading":leading, "trailing":trailing, "spacing":spacing], views: ["titleLabel":titleLabel, "numberLabel":numberLabel, "actionButton":actionButton])
         let titleLabelVerticalConstrait = NSLayoutConstraint(item: titleLabel,
             attribute: .top,
             relatedBy: .equal,
@@ -84,12 +84,12 @@ class STBoardHeaderView: UIView {
                                                        multiplier: 1.0,
                                                        constant: 0)
         
-        let buttonWidth = NSLayoutConstraint(item: actionButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 49.0)
-//        let buttonCenterY = NSLayoutConstraint(item: actionButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0)
-        let buttonVerticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[actionButton]|", options: [], metrics: nil, views: ["actionButton":actionButton])
-        
-        NSLayoutConstraint.activate(horizontalConstraits + buttonVerticalConstraints + [titleLabelVerticalConstrait, numberLabelConstraits, buttonWidth])
-        
+//        let buttonWidth = NSLayoutConstraint(item: actionButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 49.0)
+////        let buttonCenterY = NSLayoutConstraint(item: actionButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0)
+//        let buttonVerticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[actionButton]|", options: [], metrics: nil, views: ["actionButton":actionButton])
+
+//        NSLayoutConstraint.activate(horizontalConstraits + buttonVerticalConstraints + [titleLabelVerticalConstrait, numberLabelConstraits, buttonWidth])
+
     }
     
     func actionButtonBeClicked(_ sender: UIButton) {
